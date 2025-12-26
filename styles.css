@@ -7,13 +7,6 @@
     box-sizing: border-box;
 }
 body {
-    background-color: hsl(30, 54%, 90%);
-    font-family: 'Outfit', sans-serif;  /* Default font for body */
-    justify-content: center;
-  align-items: center;
-  display: flex;
-  min-height: 100vh;
-  padding: 20px;
-  line-height: 1.8;
-  letter-spacing: 0.5px;
+    background-color: blue;
+    font-family: 'Young Serif', serif;
 }
