@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap');
+@import url('https://fonts.google.com/specimen/Manrope');
 
 
 *{
@@ -7,6 +7,13 @@
     box-sizing: border-box;
 }
 body {
-    background-color: blue;
-    font-family: 'Young Serif', serif;
+    background-color: grey;
+    font-family: 'Manrope', sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    padding:20px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
 }
