@@ -16,7 +16,7 @@ Javascript
 -------------------
 ![](./images/livesite.png)
 
-- Live Site URL: [Add live site URL here](https://articlepreviewfmentor.netlify.app/)
+- [Live Site URL](https://articlepreviewfmentor.netlify.app/)
 ---------------------
 What I most learn about:
 
