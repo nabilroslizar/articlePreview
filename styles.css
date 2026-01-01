@@ -50,8 +50,8 @@ main {
     justify-content: space-between;
 }
 
-/*Tablet View: 300px * 346px*/
-@media (max-width:768px){
+/*Tablet View: 308px * 346px*/
+@media (max-width:768px) and (min-width: 481px){
  main {
     max-width: 308px;
     width: 308px;
@@ -65,6 +65,48 @@ main {
 
  .container-right{
     padding:30px;
+ }
+
+ .text h1 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+ }
+
+ .text p {
+    font-size: 12px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+ }
+
+ .profile img {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+ }
+
+ .profile-detail h3 {
+    font-size: 12px;
+ }
+
+ .profile-detail p {
+    font-size: 12px;
+ }
+
+ .share-popup {
+    padding: 16px 28px;
+    gap: 14px;
+    bottom: calc(100% + 18px);
+ }
+
+ .share-text {
+    font-size: 12px;
+    letter-spacing: 4px;
+ }
+
+ .share-popup a img {
+    width: 18px;
+    height: 18px;
  }
 }
 
@@ -91,6 +133,29 @@ main {
         flex: 1 ;
         padding:35px 30px 30px;
      }
+     .share-popup {
+        bottom: auto;
+        top: calc(100% + 20px);
+        right: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(-10px);
+        padding: 18px 32px;
+        justify-content: center;
+     }
+
+     .share-popup::after {
+        top: auto;
+        bottom: 100%;
+        right: 50%;
+        transform: translateX(50%);
+        border-top-color: transparent;
+        border-bottom-color: #48556A;
+     }
+
+     .share.active .share-popup {
+        transform: translateY(0);
+     }
 
 }
 
@@ -113,6 +178,7 @@ main {
 .profile {
     display:flex;
     align-items: center;
+    position: relative;
 }
 
 .profile img{
@@ -136,7 +202,11 @@ main {
 }
 
 .share {
-    margin-left:auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.share-button {
     width:32px;
     height:32px;
     background-color: #ECF2F8;
@@ -146,14 +216,15 @@ main {
     align-items: center;
     cursor:pointer;
     transition:background-color 0.3s;
-    overflow: visible;
+    z-index: 2;
+    position: relative;
 }
 
-.share:hover {
+.share.active .share-button {
     background-color: #48556A;
 }
 
-.share img{
+.share-button img{
     width:13px;
     height:auto;
     max-width: 100%;
@@ -162,4 +233,65 @@ main {
     display:block;
     flex-shrink: 0;
     overflow:visible;
+}
+
+.share.active .share-button img{
+    filter: brightness(0) invert(1);
+}
+
+.share-popup {
+    background-color: #48556A;
+    position: absolute;
+    bottom: calc(100% + 20px);
+    right: 0;
+    padding: 18px 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.share-popup::after {
+    content: '';
+    position: absolute;
+    top:100%;
+    right:50%;
+    transform: translateX(50%);
+    border: 8px solid transparent;
+    border-top-color: #48556A;
+  
+}
+
+.share.active .share-popup{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.share-text {
+    color: #9DAEC2;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.share-popup a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.share-popup a img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    overflow: visible;
 }
