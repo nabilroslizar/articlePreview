@@ -8,27 +8,31 @@
 }
 body {
     background-color: #ECF2F8;
+    display: flex;
     font-family: 'Manrope', sans-serif;
     justify-content: center;
     align-items: center;
-    display: flex;
     min-height: 100vh;
     padding:20px;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
 }
 
 main {
     display:flex;
-    justify-content: center;
-    align-items:center;
-    max-width: 730px;
-    border: 2px solid black;
-    max-height: 500px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* shadow for the container */
+    overflow: hidden;
+   
 }
 
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.container-left{
+
+}
+
+.container-left img{
+
+}
+
+.container-right{
+    
 }
