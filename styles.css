@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: grey;
+    background-color: #ECF2F8;
     font-family: 'Manrope', sans-serif;
     justify-content: center;
     align-items: center;
@@ -16,4 +16,19 @@ body {
     padding:20px;
     line-height: 1.8;
     letter-spacing: 0.5px;
+}
+
+main {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    max-width: 730px;
+    border: 2px solid black;
+    max-height: 500px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
